@@ -27,11 +27,15 @@ for(let number of numbers){
   numberPrinted.innerHTML = ` ${number}`;
 } 
 
-// 4.
+// 4., 5.
 setTimeout(function(){ 
   numbersBox.innerHTML = ` `;
-  
-  
+  for(number of numbers){
+    const userNumber = parseInt(prompt('Inserisci uno dei numeri che hai visualizzato: '));
+    numbers.includes(userNumber) ? valid.push(userNumber) : invalid.push(userNumber);
+  }
+  console.log('Numeri corretti --->', valid);
+  console.log('Numeri scorretti --->', invalid);
 }, 3000);
 
 
