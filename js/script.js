@@ -13,7 +13,8 @@
 /** array and numbers */
 
 const numbers = [];
-
+const valid = [];
+const invalid = [];
 // 1. , 2. , 3.
 addRandomNumbersToArray(5, numbers, 0, 100);
   console.log(numbers); 
@@ -25,6 +26,13 @@ for(let number of numbers){
   numbersBox.append(numberPrinted);
   numberPrinted.innerHTML = ` ${number}`;
 } 
+
+// 4.
+setTimeout(function(){ 
+  numbersBox.innerHTML = ` `;
+  
+  
+}, 3000);
 
 
 
