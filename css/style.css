@@ -1,10 +1,14 @@
 body{
   color: orangered;
 }
-.number{
+.number, .result{
+  text-align: center;
   font-weight: bolder;
   font-size: 50px;
   padding: 0 15px;
+}
+
+.number{
   border-right: 5px solid orangered;
 }
 

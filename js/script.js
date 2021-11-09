@@ -27,15 +27,26 @@ for(let number of numbers){
   numberPrinted.innerHTML = ` ${number}`;
 } 
 
-// 4., 5.
+// 4., 5., 6., 7.
 setTimeout(function(){ 
   numbersBox.innerHTML = ` `;
   for(number of numbers){
     const userNumber = parseInt(prompt('Inserisci uno dei numeri che hai visualizzato: '));
     numbers.includes(userNumber) ? valid.push(userNumber) : invalid.push(userNumber);
   }
-  console.log('Numeri corretti --->', valid);
-  console.log('Numeri scorretti --->', invalid);
+  const result = document.createElement('div');
+  result.className = 'result';
+  numbersBox.append(result);
+  result.innerHTML = `
+  <p>Hai dato ${valid.length} risposte corrette</p>
+  <p> e ${invalid.length} risposte sbagliate</p>
+  
+  `;
+
+  for(number of valid){
+    result.append("(" + number + ")");
+  }
+
 }, 3000);
 
 
