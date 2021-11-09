@@ -15,9 +15,17 @@
 const numbers = [];
 
 // 1. , 2. , 3.
-
 addRandomNumbersToArray(5, numbers, 0, 100);
-console.log(numbers);
+  console.log(numbers); 
+
+const numbersBox = document.getElementById('mg-numbers');
+for(let number of numbers){
+  const numberPrinted = document.createElement('div');
+  numberPrinted.className = 'number';
+  numbersBox.append(numberPrinted);
+  numberPrinted.innerHTML = ` ${number}`;
+} 
+
 
 
 
